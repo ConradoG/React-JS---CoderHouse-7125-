@@ -1,9 +1,8 @@
 import React from 'react'
 
 function Title(){
-    return <p>
-    Edit <code>src/App.js</code> and save to reload.
-  </p>
+
+return <h4>E-COMMERCE CONRADO GASSA</h4>
 }
 
 export default Title
