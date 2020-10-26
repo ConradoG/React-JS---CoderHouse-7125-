@@ -33,8 +33,6 @@ return <nav className="navbar navbar-expand-lg navbar-light bg-light">
 </div> */}
 </ul>
 
-<button type="button" class="btn btn-outline-primary btn-rounded waves-effect">CART LOGO</button>
-
 {/* SEARCH:
     <form className="form-inline my-2 my-lg-0">
       <input className="form-control mr-sm-2" type="search" placeholder="Buscar"/>

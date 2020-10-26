@@ -2,7 +2,10 @@ import React from 'react'
 
 function Title(){
 
-return <h4>E-COMMERCE CONRADO GASSA</h4>
+return <div>
+    <h4>E-COMMERCE</h4>
+<footer>CONRADO GASSA</footer>
+</div>
 }
 
 export default Title
