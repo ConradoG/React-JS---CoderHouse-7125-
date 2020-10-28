@@ -1,9 +1,10 @@
 import React from 'react';
 import Title from './components/Title'
 import NavBar from './components/NavBar'
-import CartWidget from './components/CartWidget'
 import ItemListContainer from './components/ItemListContainer'
+import ItemCount from './components/ItemCount';
 import './App.css';
+
 
 
 
@@ -13,9 +14,9 @@ function App() {
 
     <div className="App">
         <NavBar/>
-        <Title />
-        <CartWidget/>
+        <Title title="E-COMMERCE" author="CONRADO GASSA"/>
         <ItemListContainer/>
+        <ItemCount/>
     </div>
   );
 }

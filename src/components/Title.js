@@ -1,10 +1,12 @@
 import React from 'react'
 
-function Title(){
+const Title = (props) => {
 
-return <div>
-    <h4>E-COMMERCE</h4>
-<footer>CONRADO GASSA</footer>
+return <div style={{margin: '1rem'}}>
+    
+    <h3> {props.title} </h3>
+<footer> {props.author} </footer>
+
 </div>
 }
 
