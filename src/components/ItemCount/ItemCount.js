@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
-import Button from "./Button"
+import Button from './Button'
+import OnAdd from './OnAdd'
 
 export default class ItemCount extends Component {
     constructor() {
       super();
-      this.state = {
-        count: 0
-      };
+      this.state = {count: 0, stock:15, initial:0} 
+      this.props = {}
     }
-  
+    
+
     incrementCount = () => {
+      if (this.state.count < this.state.stock){
       this.setState({
         count: this.state.count +1
-      });
+      })};
     };
   
     decrementCount = () => {
@@ -21,19 +23,26 @@ export default class ItemCount extends Component {
       });
     };
   
+    addCarrito = () => {
+      alert("Añadiste " + this.state.count + " items al carrito!")
+    }
+
+
+
     render() {
       let { count } = this.state;
       return (
-        <div className="app" >
-          <div style={{margin: "1rem"}}>
-            <div class="count">
-              <h4 class="text-info">COUNTER</h4>
+        
+        <div className="border border-info w-25 mx-auto" style={{margin:"1rem"}}>
+          <div>
+            <div className="count">
               <h1>{ count }</h1>
             </div>
-            <div class="">
+            <div className="botones">
               <Button title={"-"} action={this.decrementCount} />
               <Button title={"+"} action={this.incrementCount} />
             </div>
+              <OnAdd title={"Agregar al carrito!"} action={this.addCarrito} />
           </div>
         </div>
       );
