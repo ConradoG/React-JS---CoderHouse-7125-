@@ -1,12 +1,9 @@
 import React from 'react';
 import Title from './components/Title'
 import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
 import './App.css';
-
-
-
 
 
 function App() {

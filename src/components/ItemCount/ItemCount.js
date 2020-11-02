@@ -5,8 +5,7 @@ import OnAdd from './OnAdd'
 export default class ItemCount extends Component {
     constructor() {
       super();
-      this.state = {count: 0, stock:15, initial:0} 
-      this.props = {}
+      this.state = {count: 0, stock:15, initial:0}
     }
     
 
@@ -35,7 +34,7 @@ export default class ItemCount extends Component {
         
         <div className="border border-info w-25 mx-auto" style={{margin:"1rem"}}>
           <div>
-            <div className="count">
+            <div className="cuenta">
               <h1>{ count }</h1>
             </div>
             <div className="botones">
