@@ -33,7 +33,7 @@ export default class ItemCount extends Component {
       return (
         
         <div className="border border-info w-25 mx-auto" style={{margin:"1rem"}}>
-          <div>
+          <div className="text-center">
             <div className="cuenta">
               <h1>{ count }</h1>
             </div>

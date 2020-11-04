@@ -8,13 +8,12 @@ import './App.css';
 
 function App() {
   return (
-
-    <div className="App">
-        <NavBar/>
-        <Title title="E-COMMERCE" author="CONRADO GASSA"/>
-        <ItemListContainer/>
-        <ItemCount/>
-    </div>
+      <div className="App">
+      <NavBar/>
+      <Title title="E-COMMERCE" author="CONRADO GASSA"/>
+      <ItemListContainer/>
+      <ItemCount/>
+      </div>
   );
 }
 
