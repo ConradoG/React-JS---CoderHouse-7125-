@@ -6,6 +6,6 @@ export default function ItemList(props) {
 const items = props.listadoItems
 
     return items.map((item) => (
-        <Item title={item.title} price={item.price} img={item.img}/>
+        <Item itemTitle={item.itemTitle} price={item.price} img={item.img}/>
     ))
     }

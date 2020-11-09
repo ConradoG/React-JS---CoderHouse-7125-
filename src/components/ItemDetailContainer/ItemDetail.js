@@ -2,19 +2,18 @@ import React from 'react'
 import ItemCount from '../ItemCount/ItemCount';
 
 
-export default function ItemDetail({img, title, price, descp}) {
+export default function ItemDetail({img, itemTitle, price, descp}) {
    
-    return  <div className="card">
-                <div className="card h-100">
+    return      <div className="card w-50 h-50" style={{margin:"1rem"}}>
                     <img className="card-img-top" href="# " src={img} alt=" "/>
                     <div className="card-body  bg-dark">
-                        <h4 className="card-title btn btn-info btn-rounded"> {title} </h4>
+                        <h4 className="card-title btn btn-info btn-rounded"> {itemTitle} </h4>
                         <h5 className="price text-white">{price}</h5>
                         <p className="text-white">{descp}</p>
                     </div>
                     <ItemCount/>
                 </div>
-            </div> 
+            
 }
    
    

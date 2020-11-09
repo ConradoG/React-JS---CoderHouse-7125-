@@ -1,10 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import CartWidget from './CartWidget'
 
 function NavBar(){
    
-return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a className="navbar-brand text-info" href="/#">CODERHOUSE - React JS 7125</a>
+return <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <NavLink className="navbar-brand text-info" to="/#">CODERHOUSE - React JS 7125</NavLink>
  
 
   <div className="collapse navbar-collapse" id="navbar-supported-content">
