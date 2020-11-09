@@ -12,13 +12,10 @@ function App() {
     <BrowserRouter>  
 
       <NavBar/>
-
-      <Route> <Title title="E-COMMERCE" author="CONRADO GASSA"/>  </Route> 
-
-      <Route> <ItemListContainer />  </Route>  
-
-      <Switch> 
-        <Route exact path='/item/itemTitle:'> <ItemDetailContainer/> </Route>
+      <Route exact path='/'> <Title title="E-COMMERCE" author="CONRADO GASSA"/>  </Route>
+      <Switch>
+        <Route exact path='/'> <ItemListContainer />  </Route>    
+        <Route exact path='/item/:itemTitle/'> <ItemDetailContainer/> </Route>
       </Switch>
 
     </BrowserRouter>
