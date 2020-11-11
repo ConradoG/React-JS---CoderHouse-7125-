@@ -1,49 +1,37 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Button from './Button'
-import OnAdd from './OnAdd'
+import Add from './Add'
 
-export default class ItemCount extends Component {
-    constructor() {
-      super();
-      this.state = {count: 0, stock:15, initial:0}
-    }
-    
-
-    incrementCount = () => {
-      if (this.state.count < this.state.stock){
-      this.setState({
-        count: this.state.count +1
-      })};
-    };
+export default function ItemCount({onAdd, initial, stock}) {
   
-    decrementCount = () => {
-      this.setState({
-        count: this.state.count -1
-      });
-    };
-  
-    addCarrito = () => {
-      alert("Añadiste " + this.state.count + " items al carrito!")
+let [counter, setCounter] = useState(initial)
     }
 
+    const handleClick = (amount) => {
+      return (
+        ()=>{ 
+          let total = (amount < 0) ? 0: amount;
+          let limiter = (total > stock) ? stock: total
+          setCounter(limiter)  
+            }
+             )
+    }
 
+    let prop = {counter, setCounter}
 
-    render() {
-      let { count } = this.state;
       return (
         
         <div className="border border-info w-25 mx-auto" style={{margin:"1rem"}}>
           <div className="text-center">
             <div className="cuenta">
-              <h1>{ count }</h1>
+              <h1>{ counter }</h1>
             </div>
             <div className="botones">
-              <Button title={"-"} action={this.decrementCount} />
-              <Button title={"+"} action={this.incrementCount} />
+              <Button suma = {true} onClick={handleClick} {...prop} />
+              <Button suma = {false} onClick={handleClick} {...prop}/>
             </div>
-              <OnAdd title={"Agregar al carrito!"} action={this.addCarrito} />
+              <Add onAdd = {onAdd} {...{counter}} />
           </div>
         </div>
       );
-    }
-  }
+ 

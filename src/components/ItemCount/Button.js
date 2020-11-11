@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Button extends Component {
-  render(){
-    let { title, action } = this.props
-    return(
-      <button className="btn btn-lg btn-outline-info font-weight-bold" onClick = { action }>{ title }</button>
-    )}
-}
+export default function Button ({suma, onClick, counter}) {
+
+    let sign = suma ? '+' : '-'
+
+    let amount = suma ? (counter + 1) : (counter - 1)
+
+    return(<button className="btn btn-lg btn-outline-info font-weight-bold" onClick = {onClick(amount)}> { sign } </button>)
+    }
