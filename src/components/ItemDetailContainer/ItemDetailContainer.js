@@ -27,6 +27,6 @@ export default function ItemDetailContainer() {
         })
     }, [itemTitle])
 
-    return <div><ItemDetail itemTitle={item.itemTitle} price={item.price} img={item.img} descp={item.descp} />
+    return <div><ItemDetail itemTitle={item.itemTitle} price={item.price} img={item.img} descp={item.descp}/>
      </div>
     }

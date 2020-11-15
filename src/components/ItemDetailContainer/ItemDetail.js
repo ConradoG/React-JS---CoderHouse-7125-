@@ -1,7 +1,7 @@
-import { counter } from '@fortawesome/fontawesome-svg-core';
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount';
 
+let stock
 const handleAdd = (counter) => {
   return () => {
     if(stock <= 0){
@@ -14,7 +14,7 @@ const handleAdd = (counter) => {
 
 export default function ItemDetail({img, itemTitle, price, descp}) {
 
-    return      <div className="card w-50 h-50" style={{margin:"1rem"}}>
+    return      <div className="card w-50 " style={{marginLeft:"22rem"}}>
                     <img className="card-img-top" href="# " src={img} alt=" "/>
                     <div className="card-body  bg-dark">
                         <h4 className="card-title btn btn-info btn-rounded"> {itemTitle} </h4>
@@ -23,6 +23,7 @@ export default function ItemDetail({img, itemTitle, price, descp}) {
                     </div>
                     <ItemCount onAdd={handleAdd} stock={15} initial={1}/>
                 </div>
+                
 } 
 
    

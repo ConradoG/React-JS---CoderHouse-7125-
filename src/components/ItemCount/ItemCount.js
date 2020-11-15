@@ -5,7 +5,7 @@ import Add from './Add'
 export default function ItemCount({onAdd, initial, stock}) {
   
 let [counter, setCounter] = useState(initial)
-    }
+    
 
     const handleClick = (amount) => {
       return (
@@ -27,11 +27,11 @@ let [counter, setCounter] = useState(initial)
               <h1>{ counter }</h1>
             </div>
             <div className="botones">
-              <Button suma = {true} onClick={handleClick} {...prop} />
-              <Button suma = {false} onClick={handleClick} {...prop}/>
+              <Button suma = {false} onClick={handleClick} {...prop} />
+              <Button suma = {true} onClick={handleClick} {...prop}/>
             </div>
               <Add onAdd = {onAdd} {...{counter}} />
           </div>
         </div>
       );
- 
+    } 
